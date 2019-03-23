@@ -1,0 +1,32 @@
+<div class="container">
+  <table class="table table-bordered table-striped">
+    <thead class="headerClr">
+    <tr>
+      <th class="pillDelete">FirstName</th>
+      <th class="pillDelete">LastName</th>
+      <th class="pillDelete">Date</th>
+      <th class="pillDelete">Address</th>
+      <th class="pillDelete">City</th>
+      <th class="pillDelete">State</th>
+      <th class="pillDelete">Action</th>
+    </tr>
+    </thead>
+    <tbody *ngFor="let element of data">
+    <tr>
+      <td>{{element.firstname}}</td>
+      <td>{{element.lastname}}</td>
+      <td>{{element.userdate}}</td>
+      <td>{{element.address}}</td>
+      <td>{{element.city}}</td>
+      <td>{{element.state}}</td>
+      <td><a href="#">
+        <button class="btn-primary" type="button" (click)="changeRoute(element.id);false">Update</button>
+        <button class="btn-primary" type="button" (click)="deleteUser(element.id);false">Delete</button>
+      </a></td>
+
+    </tr>
+
+    </tbody>
+  </table>
+</div>
+

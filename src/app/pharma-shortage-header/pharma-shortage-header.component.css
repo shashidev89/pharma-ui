@@ -1,0 +1,16 @@
+.navbar{
+  width: 512px!important;
+  border: 1px solid #ffffff  !important;
+  margin-left: 31%;
+}
+
+
+
+/*.navbar-inverse {*/
+/*border: 1px solid white  !important;*/
+/*}*/
+
+.nav-item{
+  border: 1px  solid white  !important;
+  border-width:thin;
+}

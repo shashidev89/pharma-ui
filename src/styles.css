@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+.nav-item{
+  width: 170px;
+  border: 1px solid #ffffff ;
+
+}
+.navbar-inverse{
+  background-color:#2d4052 ;
+  border-color:#ffffff;
+}
+.navbar-inverse .navbar-nav>li>a{
+  color: #ffffff;
+  text-align: center;
+  font-size: 15px;
+
+}
+
+.navbar-inverse .navbar-nav>li>a:hover{
+  color: #1aa9c1;
+}
+/*.navbar-inverse .navbar-nav>li>a:active{*/
+  /*color: #1aa9c1;*/
+/*}*/

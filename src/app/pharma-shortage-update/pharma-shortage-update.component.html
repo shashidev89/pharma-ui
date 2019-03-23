@@ -1,0 +1,68 @@
+<form #form="ngForm" (ngSubmit)="logForm(form.value)">
+  <div class="form-group">
+    <div class="col-md-12 ">
+      <div class="col-md-3 alignName"  >
+        <label for="mname" class="labelClr">Medicine Name</label>
+
+      </div>
+      <div class="col-md-6 alignContent"> <input  class="col-md-4" type="text" class="form-control" align="right" placeholder="Enter  Medicine Name" id="mname" name="mname" [(ngModel)]="mname"  required></div>
+    </div>
+  </div>
+
+  <br/><br/><br/>
+  <div class="form-group">
+    <div class="col-md-12">
+      <div class="col-md-3 alignName">  <label for="cname" class="labelClr">Company Name</label></div>
+      <div class="col-md-6 alignContent">  <input type="text" class="form-control" placeholder="Enter Company  Name" id="cname" name="cname" [(ngModel)]="cname"></div>
+    </div>
+  </div>
+  <br/><br/><br/>
+  <div class="form-group">
+    <div class="col-md-12">
+      <div class="col-md-3 alignName">  <label for="msize" class="labelClr">Medicine Size</label></div>
+      <div class="col-md-6 alignContent">  <input type="text" class="form-control" placeholder="Enter Medicine Size" id="msize" name="msize" [(ngModel)]="msize"></div>
+    </div>
+  </div>
+  <br/><br/><br/>
+  <div class="form-group">
+    <div class="col-md-12">
+      <div class="col-md-3 alignName">  <label for="quantity" class="labelClr">Quantity</label></div>
+      <div class="col-md-6 alignContent">  <input type="text" class="form-control" placeholder="Enter Quantity" id="quantity" name="quantity" [(ngModel)]="quantity"></div>
+    </div>
+  </div>
+
+  <br/><br/><br/>
+  <div class="form-group">
+    <div class="col-md-12">
+      <div class="col-md-3 alignName">  <label  class="labelClr">Date Created</label></div>
+      <div class="col-md-6 alignContent">
+        <ng2-datepicker [options]="options" [(ngModel)]="createdate" name="createdate">
+        </ng2-datepicker>
+      </div>
+    </div>
+  </div>
+
+
+  <br/><br/><br/>
+  <div class="form-group">
+    <div class="col-md-12">
+      <div class="col-md-3 alignName">  <label for="priority" class="labelClr">Priority</label></div>
+      <div class="col-md-6 alignContent">  <input type="text" class="form-control" placeholder="Enter Priority" id="priority" name="priority" [(ngModel)]="priority"></div>
+    </div>
+  </div>
+  <br/><br/><br/>
+  <div class="form-group">
+    <div class="col-md-12">
+      <div class="col-md-3 alignName">  <label for="mtype" class="labelClr">Medicine Type</label></div>
+      <div class="col-md-6 alignContent">
+        <select  class="form-control" name="mtype"  [(ngModel)]="type">
+          <option *ngFor="let type of mtypes" id="mtype" [ngValue]="type">{{type}}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <br/><br/><br/>
+  <div class="col-md-12 btnAlign" style="position:relative;left:350px;"><button type="submit" class="btn btn-success">Submit</button></div>
+  <div class="col-md-12 btnAlign" style="position:relative;left:350px;"><label>{{this.successMessage}}</label></div>
+
+</form>

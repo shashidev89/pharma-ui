@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="col-md-6">
+        <img src="./assets/images/Eiffel.jpg"  style="margin-left:-48px" alt="Smiley face" height="700" width="600">
+      </div>
+      <div class="col-md-6 borderAlign imgAlign">
+        <h1 class="labelClr labelAlign">Welcome</h1>
+        <form  novalidate >
+          <div class="form-group">
+            <div class="col-md-12">
+              <div class="col-md-2">
+                <label for="name" class="labelClr">Name</label>
+
+              </div>
+              <div class="col-md-10"> <input  class="col-md-4" type="text" class="form-control"  placeholder="Enter Name" id="name" name="name" [(ngModel)]="name"  required></div>
+            </div>
+          </div>
+          <br/><br/><br/>
+          <div class="form-group">
+            <div class="col-md-12">
+              <div class="col-md-2">  <label for="password" class="labelClr">Password</label></div>
+              <div class="col-md-10">  <input type="text" class="form-control" placeholder="Enter Password" id="password" name="password" [(ngModel)]="password"></div>
+            </div>
+          </div>
+          <br/><br/><br/>
+          <div class="col-md-12 btnAlign"><button type="submit" class="btn btn-success" (click)="onSubmit()">Submit</button></div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

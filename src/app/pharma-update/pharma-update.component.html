@@ -1,0 +1,81 @@
+<form #form="ngForm" (ngSubmit)="logForm(form.value)">
+  <div class="form-group">
+    <div class="col-md-12">
+      <div class="col-md-2">
+        <label for="fname" class="labelClr">First Name</label>
+
+      </div>
+      <div class="col-md-8"> <input  class="col-md-4" type="text" class="form-control"  placeholder="Enter  First Name" id="fname" name="fname" [(ngModel)]="fname"  required></div>
+    </div>
+  </div>
+  <br/><br/><br/>
+  <div class="form-group">
+    <div class="col-md-12">
+      <div class="col-md-2">  <label for="lname" class="labelClr">Last Name</label></div>
+      <div class="col-md-8">  <input type="text" class="form-control" placeholder="Enter Last Name" id="lname" name="lname" [(ngModel)]="lname"></div>
+    </div>
+  </div>
+  <br/><br/><br/>
+  <div class="form-group">
+    <div class="col-md-12">
+      <div class="col-md-2">  <label for="uname" class="labelClr">Username</label></div>
+      <div class="col-md-8">  <input type="text" class="form-control" placeholder="Enter User Name" id="uname" name="uname" [(ngModel)]="username"></div>
+    </div>
+  </div>
+  <br/><br/><br/>
+  <div class="form-group">
+    <div class="col-md-12">
+      <div class="col-md-2">  <label for="password" class="labelClr">Password</label></div>
+      <div class="col-md-8">  <input type="text" class="form-control" placeholder="Enter Password" id="password" name="password" [(ngModel)]="password"></div>
+    </div>
+  </div>
+
+  <br/><br/><br/>
+  <div class="form-group">
+    <div class="col-md-12">
+      <div class="col-md-2">  <label  class="labelClr">Date Created</label></div>
+      <div class="col-md-8">
+        <ng2-datepicker [options]="options" [(ngModel)]="userdate" id="userdate" name="userdate">
+        </ng2-datepicker>
+      </div>
+    </div>
+  </div>
+
+
+  <br/><br/><br/>
+  <div class="form-group">
+    <div class="col-md-12">
+      <div class="col-md-2">  <label for="Address" class="labelClr">Address</label></div>
+      <div class="col-md-8">  <input type="text" class="form-control" placeholder="Enter Address" id="address" name="address" [(ngModel)]="address"></div>
+    </div>
+  </div>
+  <br/><br/><br/>
+  <div class="form-group">
+    <div class="col-md-12">
+      <div class="col-md-2">  <label for="city" class="labelClr">City</label></div>
+      <div class="col-md-8">  <input type="text" class="form-control" placeholder="Enter City" id="city" name="city" [(ngModel)]="city"></div>
+    </div>
+  </div>
+  <br/><br/><br/>
+  <div class="form-group">
+    <div class="col-md-12">
+      <div class="col-md-2">  <label for="state" class="labelClr">State</label></div>
+      <div class="col-md-8">
+        <select  class="form-control" name="dropme" placeholder="Select State"  [(ngModel)]="stateValue">
+          <option *ngFor="let state of states" id="state" [ngValue]="state.name">{{state.name}}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <br/><br/><br/>
+  <div class="form-group">
+    <div class="col-md-12">
+      <div class="col-md-2">  <label for="zipcode" class="labelClr">ZipCode</label></div>
+      <div class="col-md-8">  <input type="text" class="form-control" placeholder="Enter Zipcode" id="zipcode" name="city" [(ngModel)]=zipcode></div>
+    </div>
+  </div>
+  <br/><br/><br/>
+  <div class="col-md-12 btnAlign"><button type="submit" class="btn btn-success">Submit</button></div>
+  <div class="col-md-12 btnAlign"><label>{{this.successMessage}}</label></div>
+
+</form>

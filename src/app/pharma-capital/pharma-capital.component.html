@@ -1,0 +1,85 @@
+<form #form="ngForm" (ngSubmit)="logForm(form.value)">
+  <div class="form-group">
+    <div class="col-md-12 ">
+      <div class="col-md-3 alignName">
+        <label for="disname" class="labelClr">Distributor Name</label>
+      </div>
+      <div class="col-md-6 alignContent"> <input  class="col-md-4" type="text" class="form-control" align="right" placeholder="Enter  Distributor Name" id="disname" name="disname" [(ngModel)]="disname"  required></div>
+    </div>
+  </div>
+
+  <br/><br/><br/>
+  <div class="form-group">
+    <div class="col-md-12">
+      <div class="col-md-3 alignName">  <label for="disaddress" class="labelClr">Distributor Address</label></div>
+      <div class="col-md-6 alignContent">  <input type="text" class="form-control" placeholder="Enter Distributor  Address" id="disaddress" name="disaddress" [(ngModel)]="disaddress"></div>
+    </div>
+  </div>
+  <br/><br/><br/>
+  <div class="form-group">
+    <div class="col-md-12">
+      <div class="col-md-3 alignName">  <label for="ordertype" class="labelClr">Order Type</label></div>
+      <div class="col-md-6 alignContent">
+        <select  class="form-control" name="ordertype"  [(ngModel)]="orderType">
+          <option *ngFor="let type of ordertypes" id="ordertype" [ngValue]="ordertype">{{type}}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <br/><br/><br/>
+  <div class="form-group">
+    <div class="col-md-12">
+      <div class="col-md-3 alignName">  <label  class="labelClr">Order  Date</label></div>
+      <div class="col-md-6 alignContent">
+        <ng2-datepicker [options]="options" [(ngModel)]="orderdate" name="orderdate">
+        </ng2-datepicker>
+      </div>
+    </div>
+  </div>
+  <br/><br/><br/>
+  <div class="form-group">
+    <div class="col-md-12">
+      <div class="col-md-3 alignName">  <label  class="labelClr">Delivered  Date</label></div>
+      <div class="col-md-6 alignContent">
+        <ng2-datepicker [options]="options" [(ngModel)]="deliverydate" name="deliverydate">
+        </ng2-datepicker>
+      </div>
+    </div>
+  </div>
+  <br/><br/><br/>
+  <div class="form-group">
+    <div class="col-md-12">
+      <div class="col-md-3 alignName">  <label for="tamt" class="labelClr">Total Amount</label></div>
+      <div class="col-md-6 alignContent">  <input type="text" class="form-control" placeholder="Enter Total Amount" id="tamt" name="tamt" [(ngModel)]="tamt"></div>
+    </div>
+  </div>
+  <br/><br/><br/>
+  <div class="form-group">
+    <div class="col-md-12">
+      <div class="col-md-3 alignName">  <label for="amtpaid" class="labelClr">Total Amount Paid</label></div>
+      <div class="col-md-6 alignContent">  <input type="text" class="form-control" placeholder="Enter Amount Paid" id="amtpaid" name="amtpaid" [(ngModel)]="amtpaid"></div>
+    </div>
+  </div>
+  <br/><br/><br/>
+
+  <div class="form-group">
+    <div class="col-md-12">
+      <div class="col-md-3 alignName">  <label for="dueamt" class="labelClr">Total Due Amount</label></div>
+      <div class="col-md-3 alignName">  <label id="dueamt" isValues() [(ngModel)]="dueamt" class="labelClr"></label></div>
+      <!--<div class="col-md-6 alignContent">  <input type="text" class="form-control" placeholder="Enter Due Amount" id="dueamt" name="dueamt" [(ngModel)]="dueamt" [disabled]="isValues()"></div>-->
+    </div>
+  </div>
+  <br/><br/><br/>
+  <div class="form-group">
+    <div class="col-md-12">
+      <div class="col-md-3 alignName">  <label for="discount" class="labelClr">Total Discount</label></div>
+      <div class="col-md-6 alignContent">  <input type="text" class="form-control" placeholder="Enter Discount" id="discount" name="discount" [(ngModel)]="discount"></div>
+    </div>
+  </div>
+
+  <br/><br/><br/>
+
+  <div class="col-md-12 btnAlign" style="position:relative;left:350px;"><button type="submit" class="btn btn-success">Submit</button></div>
+  <div class="col-md-12 btnAlign" style="position:relative;left:350px;"><label>{{this.successMessage}}</label></div>
+
+</form>
